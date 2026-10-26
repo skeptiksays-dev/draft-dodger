@@ -6,6 +6,10 @@
   "main": "main.js",
   "author": "SkeptiK",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skeptiksays-dev/draft-dodger.git"
+  },
   "private": true,
   "scripts": {
     "start": "electron .",
@@ -24,10 +28,26 @@
     "appId": "app.draftdodger",
     "productName": "Draft Dodger",
     "copyright": "Fan-made. Not affiliated with Valve Corporation.",
-    "files": ["main.js", "preload.js", "gsi.js", "app/**/*", "package.json"],
-    "directories": { "buildResources": "build", "output": "dist" },
+    "files": [
+      "main.js",
+      "preload.js",
+      "gsi.js",
+      "app/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
     "win": {
-      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
       "icon": "build/icon.ico",
       "artifactName": "DraftDodger-Setup-${version}.${ext}"
     },
@@ -39,6 +59,13 @@
       "shortcutName": "Draft Dodger",
       "deleteAppDataOnUninstall": false
     },
-    "publish": [{ "provider": "github", "releaseType": "release" }]
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "skeptiksays-dev",
+        "repo": "draft-dodger",
+        "releaseType": "release"
+      }
+    ]
   }
 }
